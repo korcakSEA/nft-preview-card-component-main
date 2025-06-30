@@ -49,6 +49,7 @@ img{
     padding: 1.5625rem; 
     border-radius: 1.125rem;
     overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card__image{
@@ -76,6 +77,8 @@ img{
     pointer-events: none; /* ensures hover passes through */
 }
 
+
+/* Hover effects */
 .card__image:hover{
     background-color: var(--Cyan-400);
     cursor: pointer;

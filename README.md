@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/korcakSEA/nft-preview-card-component-main.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://korcaksea.github.io/nft-preview-card-component-main/)
 
 ## My process
 
