@@ -1,0 +1,163 @@
+:root{
+
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Blue-500: hsl(215, 51%, 70%);
+    --Cyan-400: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+
+    --Blue-950-mainBG: hsl(217, 54%, 11%);
+    --Blue-900-cardBG: hsl(216, 50%, 16%);
+    --Blue-800-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    /* ## Typography */
+
+    --font-primary:"Outfit", sans-serif;
+    --font-size: 18px; /*  (paragraph) */
+}
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-primary);
+    color: var(--White);
+    background-color: var(--Blue-950-mainBG);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card{
+    width:min(90%,360px);
+    margin: 2rem auto;
+    background-color: var(--Blue-900-cardBG);
+    padding: 1.5625rem; 
+    border-radius: 1.125rem;
+    overflow: hidden;
+}
+
+.card__image{
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}   
+
+/* Base Image */
+.main__image{
+    transition: opacity 0.3s ease;
+}
+
+
+/* Hover Image (Initially Hidden) */
+.hover__image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* ensures hover passes through */
+}
+
+.card__image:hover{
+    background-color: var(--Cyan-400);
+    cursor: pointer;
+}
+
+.card__image:hover .main__image{
+    opacity: 0.5;
+}
+
+.card__image:hover .hover__image{
+    opacity: 1;
+}
+
+
+.card__content h2{
+    margin-block: 1.5625rem;
+}
+
+.card__content p{
+    opacity: 0.7;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--Blue-500);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.card__meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.card__meta img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .25rem;
+}
+
+.meta__price{
+    display: flex;
+    align-items: center;
+    color: var(--Cyan-400);
+}
+.meta__time{
+    color: var(--Blue-500);
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+hr{
+    margin-block: 0.75rem;
+    opacity: 0.4;
+}
+
+.card__author img{
+    width: 2.25rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: .75rem;
+}
+
+.card__author p{
+    display: inline-block;
+    font-weight: 400;
+    color: var(--Blue-500);
+}
+
+.card__author span{
+    color: var(--White);
+}
+
+.card__author span:hover,
+.card__content h2:hover{
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
+
+
+
+
